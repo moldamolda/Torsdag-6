@@ -4,13 +4,31 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Student s1 = new Student("lars", new ArrayList<>(Arrays.asList("math","history")));
+        ArrayList<String> student1Courses = new ArrayList<>();
+        student1Courses.add("math");
+        student1Courses.add("math");
+        student1Courses.add("math");
 
-        System.out.println(s1.passedCourses("math"));
+        Student s1 = new Student("lars", student1Courses);
 
-        Teacher t1 = new Teacher("tove", new ArrayList<>(Arrays.asList("math", "history")));
+        ArrayList<String> teacher1Courses = new ArrayList<>();
+        student1Courses.add("math");
+        student1Courses.add("math");
+        student1Courses.add("math");
 
-        System.out.println(t1.canTeach("math"));
+        Teacher t1 = new Teacher("tove", teacher1Courses);
+
+        ArrayList<Person> persons = new ArrayList<>();
+        persons.add(s1);
+        persons.add(t1);
+
+        for (int i = 0; i < persons.size(); i++) {
+            persons.get(i).get("java 1.0");
+
+
+        }
+
+
 
 
 
